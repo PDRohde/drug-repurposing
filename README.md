@@ -18,6 +18,18 @@ We prioritized druggable gene sets, evaluated at the **ATC 4th level**, by calcu
 - Identified **key T2D-associated genes** such as *PPARG*, *KCNQ1*, *TNF*, and *GCK*
 - Suggested **bezafibrate**, a PPAR pan-agonist, as a potential repurposing candidate
 
+## Requirements
+To run our analyses, you need to install the following R packages from GitHub. You can do so using the devtools package:
+<pre>
+```r
+library(devtools)
+devtools::install_github("psoerensen/gact")
+devtools::install_github("psoerensen/qgg")
+```
+</pre>
+
+For details on how to use the `gact` and `qgg` packages, please refer to their respective GitHub documentation and associated scientific publications. You can find links to these resources and more at [https://pdrohde.github.io/](https://pdrohde.github.io/).
+
 ## Citation
 If you use this code or refer to our results, please cite:
 <div style="text-indent: -30px; padding-left: 30px;">
