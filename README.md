@@ -28,34 +28,32 @@ devtools::install_github("psoerensen/qgg")
 
 For details on how to use the `gact` and `qgg` packages, please refer to their respective GitHub documentation and associated scientific publications. You can find links to these resources and more at [https://pdrohde.github.io/](https://pdrohde.github.io/).
 
-# gact Workflow Scripts
+## gact Workflow Scripts
 
 This repository contains seven R scripts that together form a complete workflow for building and analyzing a GWAS database using the `gact` framework. The scripts are organized to facilitate reproducible research, from data ingestion to gene- and pathway-level interpretation.
 
-## Overview of Scripts
+### Overview of Scripts
 
-### 1. Install and Setup
+#### 1. Install and Setup
 Installs the `gact` and `qgg` R packages, downloads a versioned gact database of GWAS summary statistics and annotations, and sets up the infrastructure for downstream analyses. Includes commands to explore the content and structure of the database.
 
-### 2. Prepare Genotype Summary Data
+#### 2. Prepare Genotype Summary Data
 Generates genotype summary objects (`Glist`) using 1000 Genomes (1000G) data. This includes full and ancestry-specific datasets (e.g., EUR). Variants are filtered and matched to those in the gact database. Filtered `Glist` objects are saved for later use. Similar procedures can be used for other ancestries.
 
-### 3. Compute Sparse LD Matrices
+#### 3. Compute Sparse LD Matrices
 Computes sparse linkage disequilibrium (LD) matrices using high-quality variants from the 1000G reference panel. Applies filtering criteria (e.g., MAF, missingness, indels, HWE) and saves updated `Glist` and an annotated marker table with LD scores. Fast computation is recommended using OpenBLAS, MKL, or similar libraries.
 
-### 4. Ingest GWAS Summary Statistics
+#### 4. Ingest GWAS Summary Statistics
 Harmonizes and ingests GWAS summary statistics for nine traits into the gact database. Performs allele matching and quality control, and annotates each dataset with relevant metadata (e.g., trait type, ancestry, sample size, publication reference). Uses `updateStatDB()` for integration.
 
-### 5. Gene-Level Analysis (VEGAS)
+#### 5. Gene-Level Analysis (VEGAS)
 Performs gene-level association analysis using the VEGAS method for all nine traits. For each study, GWAS summary statistics are aligned with the reference panel and tested for enrichment across genes (±40kb upstream / 10kb downstream). Results are saved per trait.
 
-### 6. Multi-Trait Gene-Set Analysis (MAGMA)
+#### 6. Multi-Trait Gene-Set Analysis (MAGMA)
 Performs multi-trait Bayesian gene-set enrichment analysis using the `magma()` function. Gene-level Z-scores (from VEGAS) are combined across traits and analyzed using ATC level 4 drug gene sets from the gact database to identify enriched pathways.
 
-### 7. Disease-Gene Enrichment (Hypergeometric Test)
+#### 7. Disease-Gene Enrichment (Hypergeometric Test)
 Runs hypergeometric tests to identify ATC level 4 drug classes that are significantly enriched for diabetes-related gene sets. Tests are performed using multiple sources of gene-disease associations (curated knowledge, text mining, experimental data).
-
---
 
 ## Citation
 If you use this code or refer to our results, please cite:
