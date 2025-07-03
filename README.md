@@ -21,7 +21,6 @@ We prioritized druggable gene sets, evaluated at the **ATC 4th level**, by calcu
 ## Requirements
 To run our analyses, you need to install the following R packages from GitHub. You can do so using the devtools package:
 ```markdown
-```r
 library(devtools)
 devtools::install_github("psoerensen/gact")
 devtools::install_github("psoerensen/qgg")
