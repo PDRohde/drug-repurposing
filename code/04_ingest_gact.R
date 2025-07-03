@@ -4,6 +4,8 @@
 # allele information is matched against the gact reference. The formatted data 
 # is then added to the database using `updateStatDB()`, along with metadata 
 # describing trait type, ancestry, sample size, and publication reference.
+#
+# The script process the nine traits included in the study
 #------------------------------------------------------------------------------#
 # Load libraries
   library(qgg)
