@@ -5,6 +5,15 @@
 # GWAS traits are combined and analyzed using a Bayesian multi-trait BLR model 
 # to identify enriched drug-related pathways.
 #------------------------------------------------------------------------------#
+# Load libraries
+  library(qgg)
+  library(gact)
+
+# Load Glist with information on 1000G matched to the ancestry of GWAS data
+  Glist <- readRDS(file.path(GAlist$dirs["marker"],"Glist_1000G_eur_filtered.rds"))
+
+# Load GAlist with information on gact database
+  GAlist <- readRDS(file="/../projects/gact/hsa.0.0.1/GAlist_hsa.0.0.1.rds")
 
 # Get gene sets for feature from gact database
   #sets <- getSetsDB(GAlist = GAlist, feature = "DrugGenes", minsets=5)
