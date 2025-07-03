@@ -27,6 +27,11 @@ devtools::install_github("psoerensen/qgg")
 # Update GAlist for use later
   GAlist <- readRDS(file="/../projects/gact/hsa.0.0.1/GAlist_hsa.0.0.1.rds")
 
+# Add ATC information to database
+  GAlist <- downloadDB(GAlist=GAlist, what="drugbank")
+  GAlist <- downloadDB(GAlist=GAlist, what="atc")
+
+  saveRDS(GAlist, file="/../projects/gact/hsa.0.0.1/GAlist_hsa.0.0.1.rds")
 
 #------------------------------------------------------------------------------#
 # Overview of database content
