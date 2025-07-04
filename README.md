@@ -30,7 +30,7 @@ devtools::install_github("psoerensen/qgg")
 ```
 
 For details on how to use the `gact` and `qgg` packages, please refer to their respective GitHub documentation and associated scientific publications. 
-You can find links to these resources and more at [https://pdrohde.github.io/](https://pdrohde.github.io/).
+<br>You can find links to these resources and more at [https://pdrohde.github.io/](https://pdrohde.github.io/).
 
 ## gact Workflow Scripts
 
