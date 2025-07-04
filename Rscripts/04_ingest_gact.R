@@ -20,12 +20,62 @@
 #------------------------------------------------------------------------------#
 # link: https://cardiogramplusc4d.org/data-downloads/
 
+  fname_stat <- "/../projects/gact/hsa.0.0.1/download/CARDIoGRAMplusC4D.txt.gz"
+  stat <- fread(fname_stat, data.table = FALSE)
+
+# Subset and rename columns according to required format
+  stat <- stat[, c("MarkerName", "chr", "bp_hg19", "effect_allele", "noneffect_allele", "effect_allele_freq", "beta", "se_dgc", "p_dgc")]
+  colnames(stat) <- c("marker", "chr", "pos", "ea", "nea", "eaf","b", "seb", "p")
+
+# Update database
+  GAlist <- updateStatDB(GAlist = GAlist,
+                         stat = stat,
+                         source = "CARDIoGRAMplusC4D.txt.gz",
+                         trait = "CAD",
+                         type = "binary",
+                         gender = "both",
+                         ancestry = "EUR",
+                         build = "GRCh37",
+                         reference = "PMID:26343387",
+                         n = 184305,
+                         ncase = 60801,
+                         ncontrol = 123504,
+                         comments = "Exclude UK biobank",
+                         writeStatDB = TRUE)
+
+# Save updated database
+  saveRDS(GAlist, file = "../projects/gact/hsa.0.0.1/GAlist_hsa.0.0.1.rds", compress = FALSE)
 
 #------------------------------------------------------------------------------#
 # T2D 
 #------------------------------------------------------------------------------#
 # link: https://www.diagram-consortium.org/downloads.html
 
+  fname_stat <- "/../projects/gact/hsa.0.0.1/download/Mahajan.NatGenet2018b.T2D.European.txt"
+  stat <- fread(fname_stat, data.table = FALSE)
+
+# Subset and rename columns according to required format
+  stat <- stat[, c("SNP", "chr", "Pos", "EA", "NEA", "EAF", "Beta", "SE", "Pvalue")]
+  colnames(stat) <- c("marker", "chr", "pos", "ea", "nea", "eaf","b", "seb", "p")
+
+# Update database
+  GAlist <- updateStatDB(GAlist = GAlist,
+                         stat = stat,
+                         source = "Mahajan.NatGenet2018b.T2D.European.txt",
+                         trait = "T2D",
+                         type = "binary",
+                         gender = "both",
+                         ancestry = "EUR",
+                         build = "GRCh37",
+                         reference = "PMID:30297969",
+                         n = 898130,
+                         ncase = 74124,
+                         ncontrol = 824006,
+                         comments = "Include UK biobank",
+                         writeStatDB = TRUE)
+
+# Save updated database
+  saveRDS(GAlist, file = "../projects/gact/hsa.0.0.1/GAlist_hsa.0.0.1.rds", compress = FALSE)
 
 
 #------------------------------------------------------------------------------#
