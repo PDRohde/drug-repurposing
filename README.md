@@ -32,7 +32,7 @@ devtools::install_github("psoerensen/qgg")
 For details on how to use the `gact` and `qgg` packages, please refer to their respective GitHub documentation and associated scientific publications. 
 <br>You can find links to these resources and more at [https://pdrohde.github.io/](https://pdrohde.github.io/).
 
-## gact Workflow Scripts
+## Workflow Scripts
 
 This repository contains seven R scripts that together form a complete workflow for building and analyzing a GWAS database using the `gact` framework. The scripts are organized to facilitate reproducible research, from data ingestion to gene- and pathway-level interpretation.
 
