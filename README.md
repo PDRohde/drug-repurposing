@@ -4,6 +4,9 @@
 
 This repository contains code and data used in the study:  
 **Leveraging Genetic Correlations to Prioritize Drug Groups for Repurposing in Type 2 Diabetes**
+<p align="center">
+  <img src="graphics/study_overview.png" width="600"/>
+</p>
 
 ## Study Overview
 Type 2 diabetes (T2D) is a complex polygenic disorder with limited success in therapeutic translation despite numerous genome-wide association studies (GWAS). In this study, we developed and applied a **Bayesian Linear Regression (BLR) gene set framework** to integrate GWAS summary statistics with curated drug-gene interaction data from the **Drug-Gene Interaction Database (DGIdb)**.
