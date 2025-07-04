@@ -5,7 +5,7 @@
 This repository contains code and data used in the study:  
 **Leveraging Genetic Correlations to Prioritize Drug Groups for Repurposing in Type 2 Diabetes**
 <p align="center">
-  <img src="graphics/study_overview.png" width="600"/>
+  <img src="graphics/study_overview.png" width="600" alt="Study Overview" style="pointer-events: none;" />
 </p>
 
 ## Study Overview
