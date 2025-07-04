@@ -62,7 +62,7 @@ Runs hypergeometric tests to identify ATC level 4 drug classes that are signific
 ## Citation
 If you use this code or refer to our results, please cite:
 <div style="text-indent: -30px; padding-left: 30px;">
-<p>Hjelholt AJ, Gholipourshahraki T, Bai Z, Shrestha M, Kjølby M, Sørensen P, <b><span class="my-name">Rohde PD</span></b> (2025). <b>Leveraging Genetic Correlations to Prioritize Drug Groups for Repurposing in Type 2 Diabetes</b>, <em>medRxiv</em>,<a href="https://doi.org/10.1101/2025.06.13.25329590"> link</a> </p>
+<p>Hjelholt AJ, Gholipourshahraki T, Bai Z, Shrestha M, Kjølby M, Sørensen P, Rohde PD (2025). <b>Leveraging Genetic Correlations to Prioritize Drug Groups for Repurposing in Type 2 Diabetes</b>, <em>medRxiv</em>,<a href="https://doi.org/10.1101/2025.06.13.25329590"> link</a> </p>
 </div>
 
 ## Contact
